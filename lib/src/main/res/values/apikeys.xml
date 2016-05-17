@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- insert your own keys from: https://www.flickr.com/services/apps/create/apply/ -->
+    <string name="flickr_key">REPLACE_WITH_YOUR_KEY</string>
+    <string name="flickr_secret">REPLACE_WITH_YOUR_KEY</string>
+    <!-- insert your own keys from: https://www.flickr.com/services/apps/create/apply/ -->
+    <string name="google_client_id">REPLACE_WITH_YOUR_ID</string>
+    <string name="google_client_secret">REPLACE_WITH_YOUR_SECRET</string>
+    <string name="google_app_name">REPLACE_WITH_YOUR_APP_NAME</string>
+
+    <string name="zt_key"></string>
+    <string name="zt_secret"></string>
+    <string name="zt_tor_host"></string>
+    <string name="zt_tor_port"></string>
+    <string name="zt_request"></string>
+    <string name="zt_callback"></string>
+    <string name="zt_access"></string>
+    <string name="zt_post"></string>
+
+    <string name="sm_key"></string>
+    <string name="sm_secret"></string>
+
+    <string name="sm_tor_host"></string>
+    <string name="sm_tor_port"></string>
+
+    <string name="s3_key"></string>
+    <string name="s3_secret"></string>
+    <string name="s3_bucket"></string>
+    <string name="s3_path_prefix"></string>
+
+</resources>
