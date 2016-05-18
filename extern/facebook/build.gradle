@@ -5,7 +5,6 @@ apply plugin: 'com.android.library'
 buildscript {
     repositories {
         mavenCentral()
-        maven { url "https://jitpack.io" }
 
     }
 }
@@ -37,7 +36,8 @@ dependencies {
 //    compile 'info.guardianproject.netcipher:netcipher:1.2'
     compile 'com.android.support:support-v4:23.1.0'
     compile files('libs/bolts.jar')
-    compile 'info.guardianproject.netcipher:netcipher:1.2.1'
+   // compile 'info.guardianproject.netcipher:netcipher:1.2.1'
+    compile 'com.github.n8fr8:NetCipher:n8fr8-dev-release'
 
 
 
