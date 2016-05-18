@@ -49,10 +49,11 @@ dependencies {
 
     compile 'com.jakewharton.timber:timber:3.1.0'
 
+    // http://mvnrepository.com/artifact/com.jcraft/jsch
+    compile group: 'com.jcraft', name: 'jsch', version: '0.1.51'
+
 //    compile 'info.guardianproject.netcipher:netcipher:1.2.1'
     compile 'com.github.n8fr8:NetCipher:n8fr8-dev-release'
-
-
 
     compile project(':extern:facebook')
 
