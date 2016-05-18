@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context="io.scal.secureshareuilibrary.SoundcloudLoginActivity" >
+    tools:context="io.scal.secureshare.login.SoundCloudLoginActivity" >
 
     <ImageView
         android:id="@+id/imageView1"
