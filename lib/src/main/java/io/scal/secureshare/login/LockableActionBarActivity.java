@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import info.guardianproject.cacheword.CacheWordHandler;
 import info.guardianproject.cacheword.ICacheWordSubscriber;
@@ -17,7 +17,7 @@ import io.scal.secureshare.R;
 /**
  * Created by mnbogner on 4/14/15.
  */
-public class LockableActionBarActivity extends ActionBarActivity implements ICacheWordSubscriber {
+public class LockableActionBarActivity extends AppCompatActivity implements ICacheWordSubscriber {
 
     protected CacheWordHandler mCacheWordHandler;
 
