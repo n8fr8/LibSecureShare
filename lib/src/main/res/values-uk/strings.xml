@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="error">Помилка</string>
+  <string name="lbl_Yes">Так</string>
+  <string name="lbl_Cancel">Відмінити</string>
+  <string name="lbl_ok">OK</string>
+  <string name="lbl_settings">Налаштування</string>
+  <string name="lbl_continue">Продовжити</string>
+</resources>

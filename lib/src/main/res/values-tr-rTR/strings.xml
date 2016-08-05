@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="accounts_available">Uygun</string>
+  <string name="account_logo_desc">Hesap Logosu</string>
+  <string name="account_none_found">Hesap Bulunamadı</string>
+  <string name="hello_user">Merhaba %1$s!</string>
+  <string name="error">Hata</string>
+  <string name="password">Parola</string>
+  <string name="username">Kullanıcı Adı</string>
+  <string name="email">Eposta</string>
+  <string name="lbl_Yes">Evet</string>
+  <string name="lbl_Cancel">İptal et</string>
+  <string name="lbl_ok">TAMAM</string>
+  <string name="lbl_settings">Ayarlar</string>
+  <string name="lbl_cancelled">İptal edildi</string>
+  <string name="lbl_success">Başarılı</string>
+  <string name="lbl_continue">Devam Et</string>
+  <string name="archive_title">Eposta Doğrulama</string>
+  <string name="upload_to_internet_archive">Internet Archive\'de Yayınla</string>
+  <string name="upload_securely_via_tor">Tor ile Güvenli Yükle</string>
+  <string name="use_tor_to_upload_securely_and_anonymously_">Güvenli ve anonim yükleme yapmak için Tor kullanın</string>
+  <string name="publish_to_storymaker">StoryMaker\'de Yayınla</string>
+  <string name="invalid_file_format">Geçersiz dosya formatı.</string>
+  <string name="youtube_uploading">YouTube yükleniyor...</string>
+  <string name="google_play_services_not_avail">Google Play Hizmeti Uygun değil</string>
+  <string name="connect_your_google_account_to_device">Bu cihaza Google hesabınızı bağlayın.</string>
+</resources>

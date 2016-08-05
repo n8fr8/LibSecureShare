@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="connect_account">Connetti account</string>
+  <string name="lbl_Yes">Si</string>
+  <string name="lbl_Cancel">Annulla</string>
+  <string name="lbl_ok">OK</string>
+  <string name="lbl_settings">Impostazioni</string>
+</resources>

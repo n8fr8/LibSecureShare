@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="lbl_ok">确定</string>
+  <string name="lbl_settings">设置</string>
+</resources>

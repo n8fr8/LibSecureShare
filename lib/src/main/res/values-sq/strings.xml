@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="error">Gabim</string>
+  <string name="lbl_Yes">Po</string>
+  <string name="lbl_Cancel">Anulo</string>
+  <string name="lbl_ok">Në rregull</string>
+  <string name="lbl_settings">Parametrat </string>
+</resources>

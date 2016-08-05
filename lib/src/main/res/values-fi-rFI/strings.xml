@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="connect_account">Yhdistä tili</string>
+  <string name="select_account">Valitse tili</string>
+  <string name="accounts_connected">Yhdistetty</string>
+  <string name="accounts_available">Saatavilla</string>
+  <string name="account_logo_desc">Tililogo</string>
+  <string name="account_none_found">Yhtään tiliä ei löytynyt</string>
+  <string name="hello_user">Hei %1$s!</string>
+  <string name="successfully_posted_post">Lähetys \'%1$s\' onnistui.\nLähetystunniste: %2$s</string>
+  <string name="error">Virhe</string>
+  <string name="status_update">Päivitetään tila %1$s osoitteessa %2$s</string>
+  <string name="photo_post">Valokuvalähetys</string>
+  <string name="you_picked">Poimit:</string>
+  <string name="no_friends_selected">&lt;Yhtään ystävää ei ole valittu&gt;</string>
+  <string name="no_place_selected">&lt;Yhtään paikkaa ei ole valittu&gt;</string>
+  <string name="exception">Poikkeus: %1$s</string>
+  <string name="password">Salasana</string>
+  <string name="username">Käyttäjätunnus</string>
+  <string name="email">Sähköposti</string>
+  <string name="sign_in">Kirjaudu</string>
+  <string name="lbl_Yes">Kyllä</string>
+  <string name="lbl_Cancel">Peru</string>
+  <string name="lbl_ok">Valmis</string>
+  <string name="lbl_settings">Asetukset</string>
+  <string name="lbl_cancelled">Peruttu</string>
+  <string name="lbl_success">Onnistui</string>
+  <string name="lbl_continue">Jatka</string>
+  <string name="archive_title">Sähköpostivahvistus</string>
+  <string name="archive_message">Vahvista sähköpostiosoitteesi ja palauta yhteys arkistotilillesi.</string>
+  <string name="invalid_file_format">Virheellinen tiedostomuoto.</string>
+  <string name="google_play_services_not_avail">Google Play-palvelut eivät ole saatavilla</string>
+  <string name="insufficient_permissions">Käyttöoikeudet eivät riitä</string>
+  <string name="connect_your_google_account_to_device">Yhdistä Google-tilisi tähän laitteeseen.</string>
+  <string name="remote_path">Etäpolku (valinnainen)</string>
+  <string name="hostname_address">Tietokonenimi tai IP-osoite</string>
+</resources>

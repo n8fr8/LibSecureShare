@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="error">Hiba</string>
+  <string name="lbl_ok">OK</string>
+  <string name="lbl_settings">Beállítások</string>
+  <string name="lbl_continue">Folytatás</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="lbl_Cancel">취소하기</string>
+  <string name="lbl_ok">OK</string>
+  <string name="lbl_settings">설정</string>
+</resources>

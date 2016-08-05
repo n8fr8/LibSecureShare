@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="connect_account">Conectar conta</string>
+  <string name="error">Erro</string>
+  <string name="lbl_Yes">Sim</string>
+  <string name="lbl_Cancel">Cancelar</string>
+  <string name="lbl_ok">OK</string>
+  <string name="lbl_settings">Configurações</string>
+  <string name="lbl_continue">Continuar</string>
+</resources>
