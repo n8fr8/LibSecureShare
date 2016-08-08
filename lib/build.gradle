@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 1.1
-        versionName "1.1"
+        versionCode 12
+        versionName "0.1.2"
     }
     buildTypes {
         release {
@@ -32,7 +32,9 @@ dependencies {
     compile group: 'com.google.api-client', name: 'google-api-client', version: '1.18.0-rc'
     compile group: 'com.google.oauth-client', name: 'google-oauth-client', version: '1.18.0-rc'
     compile 'com.google.api-client:google-api-client-android:1.18.0-rc'
-    compile 'com.google.apis:google-api-services-youtube:v3-rev120-1.19.0'
+//    compile 'com.google.apis:google-api-services-youtube:v3-rev120-1.19.0'
+    compile 'com.google.apis:google-api-services-youtube:v3-rev177-1.22.0'
+
 
     compile 'com.google.android.gms:play-services:6.5.87'
 
