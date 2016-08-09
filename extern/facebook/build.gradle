@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 
-
 // required for sqlbrite/apt
 buildscript {
     repositories {
@@ -16,7 +15,10 @@ android {
     defaultConfig {
         minSdkVersion 8
         targetSdkVersion 21
+        versionCode 12
+        versionName "0.1.2"
     }
+
 
     lintOptions {
         abortOnError false
@@ -32,12 +34,25 @@ android {
 }
 
 dependencies {
-//    compile 'info.guardianproject.netcipher:netcipher:1.2'
     compile 'com.android.support:support-v4:23.1.0'
     compile files('libs/bolts.jar')
-   // compile 'info.guardianproject.netcipher:netcipher:1.2.1'
     compile 'com.github.n8fr8:NetCipher:n8fr8-dev-release'
 
-
-
 }
+
+apply plugin: 'maven'
+
+uploadArchives {
+        repositories.mavenDeployer {
+                def deployPath = file(getProperty('aar.deployPath'))
+                repository(url: "file://${deployPath.absolutePath}")
+                pom.project {
+                        groupId 'info.guardianproject'
+                        artifactId 'facebookonion'
+                        version "0.1.2"
+                }
+        }
+}
+
+
+

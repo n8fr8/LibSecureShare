@@ -3,8 +3,8 @@
 buildscript {
     repositories {
         jcenter()
-
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:2.0.0'
 
@@ -15,12 +15,11 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url "https://raw.githubusercontent.com/guardianproject/gpmaven/master" }
         jcenter()
         maven { url "https://jitpack.io" }
-
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
+
+

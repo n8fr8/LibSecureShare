@@ -24,6 +24,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
 
+
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.android.support:support-v4:23.1.0'
 
@@ -57,7 +58,25 @@ dependencies {
 //    compile 'info.guardianproject.netcipher:netcipher:1.2.1'
     compile 'com.github.n8fr8:NetCipher:n8fr8-dev-release'
 
-    compile project(':extern:facebook')
+        compile 'info.guardianproject:facebookonion:0.1.2'
+ //   compile project (':extern:facebook')
 
 }
+
+
+apply plugin: 'maven'
+
+uploadArchives {
+        repositories.mavenDeployer {
+                def deployPath = file(getProperty('aar.deployPath'))
+                repository(url: "file://${deployPath.absolutePath}")
+                pom.project {
+                        groupId 'info.guardianproject'
+                        artifactId 'libsecureshare'
+                        version "0.1.2"
+                }
+        }
+}
+
+
 
