@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 15
-        versionName "0.1.5"
+        versionCode 16
+        versionName "0.1.6"
     }
     buildTypes {
         release {
@@ -79,7 +79,7 @@ uploadArchives {
                 pom.project {
                         groupId 'info.guardianproject'
                         artifactId 'libsecureshare'
-                        version "0.1.5"
+                        version "0.1.6"
                 }
         }
 }
