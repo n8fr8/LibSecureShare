@@ -4,7 +4,7 @@ lang_map = af_ZA: af-rZA, am_ET: am-rET, ar_AE: ar-rAE, ar_BH: ar-rBH, ar_DZ: ar
 
 [storymaker.secureshare_strings]
 file_filter = lib/src/main/res/values-<lang>/strings.xml
-source_file = lib/src/main//res/values/strings.xml
+source_file = lib/src/main/res/values/strings.xml
 source_lang = en
 type = ANDROID
 
