@@ -1,6 +1,9 @@
 package io.scal.secureshare.lib;
 
+import ch.boye.httpclientandroidlib.HttpHost;
 import ch.boye.httpclientandroidlib.client.HttpClient;
+import ch.boye.httpclientandroidlib.conn.params.ConnRoutePNames;
+import ch.boye.httpclientandroidlib.impl.client.DefaultHttpClient;
 import ch.boye.httpclientandroidlib.impl.client.HttpClients;
 import timber.log.Timber;
 
@@ -10,8 +13,6 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.amazonaws.org.apache.http.HttpHost;
-import com.amazonaws.org.apache.http.conn.params.ConnRoutePNames;
 import com.squareup.okhttp.OkHttpClient;
 
 import org.json.JSONArray;
@@ -90,14 +91,18 @@ public class SMWrapper {
         if (    mClient == null) {
 
             try {
+                /**
                 KeyStore ks = KeyStore.getInstance("AndroidKeyStore");
                 ks.load(null);
                 mClient = new StrongHttpsClient(mContext, ks, DEFAULT_HOST);
+                 */
+              //  mClient = HttpClients.createDefault();
+                mClient=  new DefaultHttpClient();
 
             } catch (Exception e)
             {
                 Log.e("NetCipher","error init'd stronghttpsclient, failing to stamndard Http client",e);
-                mClient = HttpClients.createDefault();
+               // mClient = HttpClients.createDefault();
 
             }
 
