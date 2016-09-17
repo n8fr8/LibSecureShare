@@ -1,5 +1,7 @@
 package io.scal.secureshare.lib;
 
+import ch.boye.httpclientandroidlib.client.HttpClient;
+import ch.boye.httpclientandroidlib.impl.client.HttpClients;
 import timber.log.Timber;
 
 
@@ -8,6 +10,8 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
+import com.amazonaws.org.apache.http.HttpHost;
+import com.amazonaws.org.apache.http.conn.params.ConnRoutePNames;
 import com.squareup.okhttp.OkHttpClient;
 
 import org.json.JSONArray;
@@ -21,6 +25,7 @@ import java.io.InputStreamReader;
 import java.net.InetSocketAddress;
 import java.net.Proxy;
 import java.net.SocketAddress;
+import java.security.KeyStore;
 import java.util.Date;
 import java.util.List;
 
@@ -46,7 +51,7 @@ public class SMWrapper {
 
     private String mToken;
 
-    StrongHttpsClient mClient = null;
+    HttpClient mClient = null;
     boolean proxySet = false;
     //HttpClient mClient = null;
 
@@ -63,6 +68,8 @@ public class SMWrapper {
     private static final String DESCRIPTION = "description";
     private static final String PUBLISH_DATE = "publish_date";
 
+    private final static String DEFAULT_HOST= "storymaker.org";
+
     // public SMWrapper(String clientId, String clientSecret, String token) {
     public SMWrapper(Context context) {
         mContext = context;
@@ -78,16 +85,20 @@ public class SMWrapper {
         UPLOAD_URL = url + "api/story/";
     }
 
-    private synchronized StrongHttpsClient getHttpClientInstance() {
+    private synchronized HttpClient getHttpClientInstance() {
     //private synchronized HttpClient getHttpClientInstance() {
         if (    mClient == null) {
 
             try {
-                mClient = new StrongHttpsClient(mContext, null);
-                //mClient = HttpClients.createDefault();
+                KeyStore ks = KeyStore.getInstance("AndroidKeyStore");
+                ks.load(null);
+                mClient = new StrongHttpsClient(mContext, ks, DEFAULT_HOST);
+
             } catch (Exception e)
             {
-                Log.e("NetCipher","error init'd stronghttpsclient",e);
+                Log.e("NetCipher","error init'd stronghttpsclient, failing to stamndard Http client",e);
+                mClient = HttpClients.createDefault();
+
             }
 
         }
@@ -117,18 +128,17 @@ public class SMWrapper {
         //Timber.d(username);
         //Timber.d(password);
 
-        StrongHttpsClient client = getHttpClientInstance();
+        HttpClient client = getHttpClientInstance();
         //HttpClient client = getHttpClientInstance();
 
         // check for tor
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
         boolean useTor = settings.getBoolean("pusetor", false);
 
-        /*
-        if (useTor) {
-            OrbotHelper oh = new OrbotHelper(mContext);
 
-            if ((!oh.isOrbotInstalled()) || (!oh.isOrbotRunning())) {
+        if (useTor) {
+
+            if ((!OrbotHelper.isOrbotInstalled(mContext)) || (!OrbotHelper.isOrbotRunning(mContext))) {
                 Timber.e("TOR SELECTED BUT ORBOT IS INACTIVE (ABORTING)");
 
                 return null;
@@ -153,7 +163,7 @@ public class SMWrapper {
                 Timber.d("TOR NOT SELECTED");
             }
         }
-        */
+
 
         /*
         HttpPost post = new HttpPost(AUTHORIZE_URL);
@@ -474,18 +484,16 @@ public class SMWrapper {
         //Timber.d(user + "_public");
         //Timber.d(credentials);
 
-        StrongHttpsClient client = getHttpClientInstance();
-        //HttpClient client = getHttpClientInstance();
+        HttpClient client = getHttpClientInstance();
 
         // check for tor
         SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(mContext);
         boolean useTor = settings.getBoolean("pusetor", false);
 
-        /*
         if (useTor) {
-            OrbotHelper oh = new OrbotHelper(mContext);
 
-            if ((!oh.isOrbotInstalled()) || (!oh.isOrbotRunning())) {
+
+            if ((!OrbotHelper.isOrbotInstalled(mContext)) || (!OrbotHelper.isOrbotRunning(mContext))) {
                 Timber.e("TOR SELECTED BUT ORBOT IS INACTIVE (ABORTING)");
 
                 return null;
@@ -510,7 +518,6 @@ public class SMWrapper {
                 Timber.d("TOR NOT SELECTED");
             }
         }
-        */
 
         HttpPost post = new HttpPost(UPLOAD_URL);
 
