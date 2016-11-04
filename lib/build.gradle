@@ -79,7 +79,7 @@ uploadArchives {
                 pom.project {
                         groupId 'info.guardianproject'
                         artifactId 'libsecureshare'
-                        version "0.1.9"
+                        version "0.1.10"
                 }
         }
 }
