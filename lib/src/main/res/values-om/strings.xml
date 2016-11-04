@@ -1,2 +1,51 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<resources/>
+<resources>
+  <string name="connect_account">Eenyummeessaa Walindhi</string>
+  <string name="select_account">Eenyummeessaa Filadhu</string>
+  <string name="accounts_connected">Walindhii ta\'e</string>
+  <string name="accounts_available">Jira</string>
+  <string name="account_logo_desc">Aasxaa Eenyummeessaa</string>
+  <string name="account_none_found">Eenyummeessaan Argame Hin Jiru</string>
+  <string name="dialog_account_message">Eenyummeessa Adda Baasii?</string>
+  <string name="permission_not_granted">Sababa eyyamni hin kennamneef gochoota filataman hojjechuu hin dandeenye.</string>
+  <string name="hello_user">Hello %1$s!</string>
+  <string name="successfully_posted_post">Maxxansameera \'%1$s\'.\nPost ID: %2$s</string>
+  <string name="error">Dogoggora</string>
+  <string name="status_update">Haala  %1$s at %2$s  fooyyessaa jira</string>
+  <string name="photo_post">Maxxansa Suuraa</string>
+  <string name="you_picked">Kan Filatte:</string>
+  <string name="no_friends_selected">&lt;Hiriyaan filatame hin jiru&gt;</string>
+  <string name="no_place_selected">&lt;Bakki filatame hin jiru&gt;</string>
+  <string name="exception">Quxaala: %1$s</string>
+  <string name="password">Iggita</string>
+  <string name="username">Maqaa Fayyadamaa</string>
+  <string name="email">Iimeelii</string>
+  <string name="sign_in">Seeni</string>
+  <string name="sign_in_storymaker">StoryMaker\'iitti Seeni</string>
+  <string name="inavalid_credentials">Eenyummaa Seensaa Sirrii Hin Taane</string>
+  <string name="ssh_upload_in_progress">SSH olfe\'uutti jira...</string>
+  <string name="lbl_Yes">Eeyyee</string>
+  <string name="lbl_Cancel">Dhiisi</string>
+  <string name="lbl_off">Cufi</string>
+  <string name="lbl_on">Bani</string>
+  <string name="lbl_ok">Tole</string>
+  <string name="lbl_settings">Sirreeffama</string>
+  <string name="lbl_cancelled">Hafeera</string>
+  <string name="lbl_success">Ta\'eera</string>
+  <string name="lbl_continue">Itti fufi</string>
+  <string name="archive_title">Mirkaneessa Iimeelii</string>
+  <string name="archive_message">Maaloo iimeeliikee mirkaneessiitii eenyummeessaa Archivetti walindhaa\'i.</string>
+  <string name="upload_to_internet_archive">Kuusaa Interneetiitti olfe\'i</string>
+  <string name="upload_securely_via_tor">Nageenyyaan karaa Tor olfe\'i</string>
+  <string name="use_tor_to_upload_securely_and_anonymously_">Tor fayyadamuudhaan nageenyya fi dhokachuudhaan ol fe\'i</string>
+  <string name="publish_to_storymaker">StoryMaker\'itti Maxxansi</string>
+  <string name="login_to_storymaker_cc_to_publish_">Maxxansuuf StoryMaker.org seeni</string>
+  <string name="invalid_file_format">Faayilii dogoggoraa</string>
+  <string name="youtube_uploading">YouTube irratt fe\'aa jira...</string>
+  <string name="google_play_services_not_avail">Tajaajilli Google Play hin jiru</string>
+  <string name="insufficient_permissions">Eyyama ga\'aa hin taane</string>
+  <string name="connect_your_google_account_to_device">Eenyummeessaa Google meeshaa kanarratti walindhi.</string>
+  <string name="remote_path">Karaa fagoo (dhiisuu dandeessa)</string>
+  <string name="server_nickname">Masoo Kaadhimtaa</string>
+  <string name="hostname_address">Maqaa Afeertuu yookaan Teessoo Aaloo Interneetii</string>
+</resources>
