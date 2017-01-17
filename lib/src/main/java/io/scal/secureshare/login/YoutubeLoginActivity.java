@@ -44,6 +44,7 @@ public class YoutubeLoginActivity extends LockableActivity implements Runnable {
 
 	private int mAccessResult = RESULT_CANCELED;
 	private String mAccessToken = null;
+	private String mUserEmail = null;
 
 	static final String TAG = "YoutubeLoginActivity";
 	
@@ -149,12 +150,12 @@ public class YoutubeLoginActivity extends LockableActivity implements Runnable {
 																CLIENT_ID, 
 																CLIENT_SECRET, 
 																mReturnedWebCode, REDIRECT_URI).execute();
+
+			mUserEmail = getUserEmail(mAuthResp.getAccessToken());
 			
-			String userEmail = getUserEmail(mAuthResp.getAccessToken());
-			
-	        if (null != userEmail) {
+	        if (null != mUserEmail) {
 	            mAccessResult = RESULT_OK;
-	            mAccessToken = userEmail;
+	            mAccessToken = mAuthResp.getAccessToken();
 	        } else { // failed login
 	            mAccessResult = RESULT_CANCELED;
 	        }
@@ -196,7 +197,9 @@ public class YoutubeLoginActivity extends LockableActivity implements Runnable {
 		Timber.d("finish()");
 			
 		Intent data = new Intent();
+		data.putExtra(SiteController.EXTRAS_KEY_USERNAME, mUserEmail);
         data.putExtra(SiteController.EXTRAS_KEY_CREDENTIALS, mAccessToken);
+
         setResult(mAccessResult, data);;
 
 		super.finish();

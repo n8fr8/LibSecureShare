@@ -30,6 +30,9 @@ import com.google.api.client.googleapis.extensions.android.gms.auth.GooglePlaySe
 import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
 import com.google.api.client.googleapis.media.MediaHttpUploader;
 import com.google.api.client.googleapis.media.MediaHttpUploaderProgressListener;
+import com.google.api.client.http.HttpHeaders;
+import com.google.api.client.http.HttpRequest;
+import com.google.api.client.http.HttpRequestInitializer;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.InputStreamContent;
 import com.google.api.client.http.javanet.NetHttpTransport;
@@ -67,7 +70,7 @@ public class YoutubeSiteController extends SiteController {
     }
     
 	@Override
-	public void upload(Account account, HashMap<String, String> valueMap) {
+	public void upload(final Account account, HashMap<String, String> valueMap) {
 		Timber.d("Upload file: Entering upload");
 		
 		String title = valueMap.get(VALUE_KEY_TITLE);
@@ -77,11 +80,7 @@ public class YoutubeSiteController extends SiteController {
 		
 		List<String> scopes = new ArrayList<String>();
 		scopes.add(YouTubeScopes.YOUTUBE_UPLOAD);
-		
-		//set username
-		GoogleAccountCredential credential = GoogleAccountCredential.usingOAuth2(super.mContext, scopes);
-		credential.setSelectedAccountName(account.getCredentials());
-		
+
 		//set proxy
 		useTor=false; //FIXME Hardcoded until we find a Tor workaround
 		if(super.torCheck(useTor, super.mContext)) {
@@ -89,7 +88,12 @@ public class YoutubeSiteController extends SiteController {
 			transport = new NetHttpTransport.Builder().setProxy(proxy).build();
 		}
 		
-        mYoutube = new com.google.api.services.youtube.YouTube.Builder(transport, jsonFactory, credential)
+        mYoutube = new com.google.api.services.youtube.YouTube.Builder(transport, jsonFactory,
+        new HttpRequestInitializer() {
+            public void initialize(HttpRequest request) throws IOException {
+                request.getHeaders().setAuthorization("Bearer " + account.getCredentials());
+            }
+        })
                         .setApplicationName(mContext.getString(R.string.google_app_name))
                         .setGoogleClientRequestInitializer(new YouTubeRequestInitializer(CLIENT_ID))
                         .build();
