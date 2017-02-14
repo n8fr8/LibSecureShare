@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 18
-        versionName "0.1.10"
+        versionCode 19
+        versionName "0.1.19"
     }
     buildTypes {
         release {
@@ -47,7 +47,7 @@ dependencies {
        exclude group: 'com.google.guava'
     }
 
-    compile 'com.google.guava:guava:18.0'
+   // compile 'com.google.guava:guava:18.0'
     compile 'com.google.code.gson:gson:2.3'
 
     compile 'org.apache.httpcomponents:httpcore:4.3.2'
@@ -79,7 +79,7 @@ uploadArchives {
                 pom.project {
                         groupId 'info.guardianproject'
                         artifactId 'libsecureshare'
-                        version "0.1.10"
+                        version "0.1.19"
                 }
         }
 }
